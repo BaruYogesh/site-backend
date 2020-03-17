@@ -13,11 +13,11 @@ client.stream('statuses/filter', {follow: '2759958727'}, function(stream) {
     //   if(event.user.id === 2759958727){
     //       console.log("baru tweeted xd")
     //   }
-        //console.log(event)
+        console.log(event)
         let payload = {
             type: "twitter",
             title: event.user.name,
-            url: "https://twitter.com/baruyogesh/status/" + event.id,
+            url: "https://twitter.com/baruyogesh/status/" + event.id_str,
             content: event.text,
             imageUrl: [],
             createDate: event.created_at
